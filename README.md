@@ -3,7 +3,7 @@
 # Subject
 Règles du jeu: Le poker éléctronique est un jeu de type machine à sous, le joueur choisi sa mise, appui sur le bouton "jouer" et la machine lui propose un jeu de 5 cartes tirés d'un jeu de 52 cartes. Le jouer peut alors choisir des cartes à garder, il peut choisir d'en garder 0, 1, 2, 3 ou 4, puis rappuie sur le bouton. Selon le choix du joueur, la machine tire de nouveaux le nombre de carte qu'il faut pour constituer le tirage final. Enfin le joueur récupère ses gains qui correspondent au montant de sa mise multiplié par le gain correspondant à la combinaison obtenue sur le tirage final. Si il n'a aucune combinaison il perd sa mise.
 
-#Combinaison
+# Combinaison
 -Paire : 2 cartes identiques => 1 fois la mise
 -Double Paire : deux fois 2 cartes identiques => 2 fois la mise
 -Brelan : 3 cartes identiques => 3 fois la mise
