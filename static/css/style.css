@@ -1,0 +1,27 @@
+body {
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
+    color: white;
+}
+
+h1 {
+    margin-bottom: 1rem;
+}
+
+.col-auto {
+    margin-bottom: 1em;
+}
+
+img.card {
+    width: 150px;
+    max-width: 100%;
+}
+
+main {
+    flex-grow: 1;
+    padding-top: 2em;
+    background: url('/static/backgrounds/poker_fond.jpg') no-repeat center;
+    background-size: cover;
+}
+

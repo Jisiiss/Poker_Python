@@ -1,0 +1,52 @@
+{% extends 'modele.html' %}
+{% block body %}
+
+<h1>Poker Online</h1><br>
+<form method="POST" action="/first-tirage">
+	<div class="form-group">
+		<label for="quitter"> Banque <span class="text-danger">*</span> </label>
+		<div class="input-group">
+			<div class="input-group-prepend">
+			</div>
+			{% if quitter %}
+			<input
+				type="number"
+				class="form-control"
+				id="quitter"
+				value="{{ quitter }}"
+				disabled
+			/>
+			<input type="hidden" name="quitter" value="{{ quitter }}" />
+			{% else %}
+			<input
+				type="number"
+				class="form-control"
+				id="quitter"
+				name="quitter"
+				placeholder="Banque"
+				required
+			/>
+			{% endif %}
+		</div>
+	</div>
+	<div class="form-group">
+		<label for="bet"> Mise <span class="text-danger">*</span> </label>
+		<div class="input-group">
+			<div class="input-group-prepend">
+			</div>
+			<input
+				type="number"
+				class="form-control"
+				id="bet"
+				name="bet"
+				placeholder="Mise"
+				required
+			/>
+		</div>
+	</div>
+	<button type="submit" class="btn btn-dark"> Piocher</button>
+	{% if quitter %}
+		<a href="/reset" class="btn btn-dark"> Quitter la table </a>
+	{% endif %}
+</form>
+{% endblock %}

@@ -1,0 +1,14 @@
+{% extends 'modele.html' %}
+<!---->
+{% block head %}<title>Poker Online | Erreur</title>{% endblock %}
+<!---->
+{% block body %}
+<h1 class="text-danger">
+	<i class="fas fa-times"></i>
+	Erreur
+</h1>
+<p class="alert alert-danger" role="alert">{{ error }}</p>
+<a class="btn btn-dark" href="/" title="retour">
+	<i class="fas fa-arrow-left"></i>
+</a>
+{% endblock %}

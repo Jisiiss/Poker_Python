@@ -1,0 +1,32 @@
+{% extends 'modele.html' %}
+{% block body %}
+
+<h1>Tirage N°1</h1>
+<form method="POST" action="/second-tirage">
+    <p>Décochez les cartes que vous ne voulez pas conserver.</p>
+    <div class="row">
+        {% for card in hand %}
+        <div class="col-auto">
+            <div class="form-check">
+                <input
+                    type="checkbox"
+                    class="form-check-input"
+                    id="{{ card }}"
+                    name="{{ card }}"
+                    checked
+                />
+                <label class="form-check-label" for="{{ card }}">
+                    <img
+                        class="img-fluid card"
+                        alt="carte"
+                        src="{{ url_for('static', filename='cards/'+card+'.svg') }}"
+                    />
+                    <span class="sr-only">{{ card }}</span>
+                </label>
+            </div>
+        </div>
+        {% endfor %}
+    </div>
+    <button type="submit" class="btn btn-dark">Continuer</button>
+</form>
+{% endblock %}
